@@ -1,33 +1,25 @@
 # Global structure
 
-Calculator has a kinda state-driven design:
+Calculator has kind of a state-driven design:
 
 There are a few modules:
 
-1. Input module: 
+1. **Input module**: collects user input
 
-  collects user input
+2. **Controller module:** controls the flow, updates the **state** of the calculator
 
-2. Controller module:
+3. **State module:** contains the current state
 
-  controls the flow, updates the **state** of the calculator
+4. **Calculation module:** performs the calculations on the state called by the controlle
 
-3. State module:
-
-  contains the current state
-
-4. Calculation module:
-
-  performs the calculations on the state called by the controlle
-
-5. Display moduse: 
-
-  displays the current state in a controlled way
+5. **Display module:** displays the current state in a controlled way
 
 
 Flow (idk, probably):
 
+```
 user input -> input -> controller -> state -> controller -> display
                                          ^         |
                                          |         v
                                          calculation
+```
